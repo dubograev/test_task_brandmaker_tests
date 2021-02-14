@@ -10,12 +10,14 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("web")
-public class RequestDemoButtonTests {
+public class RequestDemoButtonTests extends TestBase{
 
     @Test
     @DisplayName("Main page should contain \"Request a Demo\" button")
     public void requestDemoButtonExistsTest() {
-        open("https://www.brandmaker.com/");
+        open("");
+        $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();
+
 
         $(".elementor-button-text", 2).scrollTo().shouldHave(text("Request a Demo"));
     }
@@ -23,10 +25,10 @@ public class RequestDemoButtonTests {
     @Test
     @DisplayName("\"Request a Demo\" button should lead to a proper page with \"Schedule Customized Demo\" title")
     public void requestDemoButtonClickTest() {
-        open("https://www.brandmaker.com/");
+        open("");
+        $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();
 
-        $(".elementor-button-text", 2).scrollTo().shouldHave(text("Request a Demo"));
-        $(byText("Request a Demo")).scrollTo().click();
+        $(".elementor-button-text", 2).scrollIntoView(false).click();
         $("h1").shouldHave(text("Schedule Customized Demo"));
     }
 }

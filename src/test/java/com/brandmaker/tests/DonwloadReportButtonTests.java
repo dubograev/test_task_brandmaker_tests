@@ -11,12 +11,14 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("web")
-public class DonwloadReportButtonTests {
+public class DonwloadReportButtonTests extends TestBase{
 
     @Test
     @DisplayName("Main page should contain \"Download Report\" button")
     public void downloadReportButtonExistsTest() {
-        open("https://www.brandmaker.com/");
+        open("");
+        $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();
+
 
         $(".bm_header_gs_button", 0).shouldHave(text("Download Report"));
     }
@@ -24,7 +26,9 @@ public class DonwloadReportButtonTests {
     @Test
     @DisplayName("\"Download Report\" button should lead to a proper page with \"Download the full report\" button")
     public void downloadReportButtonClickTest() {
-        open("https://www.brandmaker.com/");
+        open("");
+        $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();
+
 
         $(".bm_header_gs_button", 0).shouldHave(text("Download Report"));
         $(byText("Download Report")).click();
