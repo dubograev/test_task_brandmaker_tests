@@ -1,5 +1,7 @@
 package com.brandmaker.tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -10,9 +12,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("web")
+@Feature("Main Page")
 public class RequestDemoButtonTests extends TestBase{
 
     @Test
+    @Story("\"Request a Demo\" button")
     @DisplayName("Main page should contain \"Request a Demo\" button")
     public void requestDemoButtonExistsTest() {
         open("");
@@ -23,6 +27,7 @@ public class RequestDemoButtonTests extends TestBase{
     }
 
     @Test
+    @Story("\"Request a Demo\" button")
     @DisplayName("\"Request a Demo\" button should lead to a proper page with \"Schedule Customized Demo\" title")
     public void requestDemoButtonClickTest() {
         open("");

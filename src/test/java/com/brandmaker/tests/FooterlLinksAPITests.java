@@ -1,5 +1,7 @@
 package com.brandmaker.tests;
 
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -7,9 +9,11 @@ import org.junit.jupiter.api.Test;
 import static io.restassured.RestAssured.when;
 
 @Tag("api")
+@Feature("Main Page")
 public class FooterlLinksAPITests {
 
     @Test
+    @Story("Footer -> Solutions links")
     @DisplayName("Check that \"Brand Management & Localization\" link returns code 200")
     public void brandManagementLocalizationLinkTest() {
         when()
@@ -19,6 +23,7 @@ public class FooterlLinksAPITests {
     }
 
     @Test
+    @Story("Footer -> Solutions links")
     @DisplayName("Check that \"Budget Planning & Management\" link returns code 200\n")
     public void budgetPlanningManagementLinkTest() {
         when()
@@ -28,6 +33,7 @@ public class FooterlLinksAPITests {
     }
 
     @Test
+    @Story("Footer -> Solutions links")
     @DisplayName("Check that \"Campaign Planning & Execution\" link returns code 200")
     public void campaignPlanningExecutionLinkTest() {
         when()
@@ -37,6 +43,7 @@ public class FooterlLinksAPITests {
     }
 
     @Test
+    @Story("Footer -> Solutions links")
     @DisplayName("Check that \"Content Creation & Distribution\" link returns code 200")
     public void contentCreationDistributionLinkTest() {
         when()
@@ -46,6 +53,7 @@ public class FooterlLinksAPITests {
     }
 
     @Test
+    @Story("Footer -> Solutions links")
     @DisplayName("Check that \"Performance Measurement & Optimization\" link returns code 200")
     public void performanceMeasurementOptimizationLinkTest() {
         when()

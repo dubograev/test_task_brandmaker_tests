@@ -1,6 +1,7 @@
 package com.brandmaker.tests;
 
-import com.codeborne.selenide.Condition;
+import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,9 +12,11 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("web")
+@Feature("Main Page")
 public class DonwloadReportButtonTests extends TestBase{
 
     @Test
+    @Story("\"Download Report\" button")
     @DisplayName("Main page should contain \"Download Report\" button")
     public void downloadReportButtonExistsTest() {
         open("");
@@ -24,6 +27,7 @@ public class DonwloadReportButtonTests extends TestBase{
     }
 
     @Test
+    @Story("\"Download Report\" button")
     @DisplayName("\"Download Report\" button should lead to a proper page with \"Download the full report\" button")
     public void downloadReportButtonClickTest() {
         open("");

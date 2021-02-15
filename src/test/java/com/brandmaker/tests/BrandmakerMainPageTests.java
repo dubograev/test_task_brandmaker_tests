@@ -1,5 +1,6 @@
 package com.brandmaker.tests;
 
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -11,6 +12,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 @Tag("web")
+@Feature("Main Page")
 public class BrandmakerMainPageTests extends TestBase{
 
     @Test
@@ -33,7 +35,6 @@ public class BrandmakerMainPageTests extends TestBase{
 
         // String consoleLogs = getConsoleLogs();
        // assertThat(consoleLogs, not(containsString("SEVERE")));
-
     }
 
 }

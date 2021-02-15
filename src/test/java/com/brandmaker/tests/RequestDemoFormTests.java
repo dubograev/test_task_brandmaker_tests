@@ -1,6 +1,6 @@
 package com.brandmaker.tests;
 
-import com.codeborne.selenide.Configuration;
+import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,8 @@ import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
-//@Tag("web")
+@Tag("web")
+@Feature("\"Request a Demo\" form")
 public class RequestDemoFormTests extends TestBase{
 
     @Test
