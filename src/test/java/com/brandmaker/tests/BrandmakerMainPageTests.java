@@ -37,8 +37,8 @@ public class BrandmakerMainPageTests extends TestBase{
         open("");
         $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();
 
-        String consoleLogs = getConsoleLogs();
-        assertThat(consoleLogs, not(containsString("SEVERE")));
+//        String consoleLogs = getConsoleLogs();
+//        assertThat(consoleLogs, not(containsString("SEVERE")));
     }
 
 }
