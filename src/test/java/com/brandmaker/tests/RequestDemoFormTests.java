@@ -1,5 +1,6 @@
 package com.brandmaker.tests;
 
+import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -16,6 +17,7 @@ import static com.codeborne.selenide.Selenide.open;
 public class RequestDemoFormTests extends TestBase{
 
     @Test
+    @AllureId("#1641")
     @DisplayName("Request a demo with empty form - Negative scenario")
     public void requestDemoWithEmptyFormTest() {
         open("contact/request-demo/");
@@ -32,6 +34,7 @@ public class RequestDemoFormTests extends TestBase{
     }
 
     @Test
+    @AllureId("#1642")
     @DisplayName("Request a demo with non-business email - Negative scenario")
     public void requestDemoWithFormWithGmailEmailTest() {
         open("contact/request-demo/");
