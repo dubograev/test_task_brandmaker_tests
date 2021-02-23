@@ -2,6 +2,7 @@ package com.brandmaker.tests;
 
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
+import io.qameta.allure.Story;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
@@ -31,8 +32,8 @@ public class BrandmakerMainPageTests extends TestBase{
 
     @Test
     @AllureId("1623")
-    @Disabled
     @DisplayName("Console log should not contain any errors")
+    @Disabled
     public void mainPageConsoleLogTest() {
         open("");
         $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();

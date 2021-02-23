@@ -14,11 +14,11 @@ import static com.codeborne.selenide.Selenide.open;
 
 @Tag("web")
 @Feature("Main Page")
+@Story("\"Download Report\" button")
 public class DonwloadReportButtonTests extends TestBase{
 
     @Test
     @AllureId("1625")
-    @Story("\"Download Report\" button")
     @DisplayName("Main page should contain \"Download Report\" button")
     public void downloadReportButtonExistsTest() {
         open("");
@@ -30,7 +30,6 @@ public class DonwloadReportButtonTests extends TestBase{
 
     @Test
     @AllureId("1626")
-    @Story("\"Download Report\" button")
     @DisplayName("\"Download Report\" button should lead to a proper page with \"Download the full report\" button")
     public void downloadReportButtonClickTest() {
         open("");

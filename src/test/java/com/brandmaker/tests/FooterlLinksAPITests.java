@@ -11,10 +11,11 @@ import static io.restassured.RestAssured.when;
 
 @Tag("api")
 @Feature("Main Page")
+@Story("Footer -> Solutions links")
 public class FooterlLinksAPITests {
 
     @Test
-    @Story("Footer -> Solutions links")
+
     @AllureId("1635")
     @DisplayName("Check that \"Brand Management & Localization\" link returns code 200")
     public void brandManagementLocalizationLinkTest() {
@@ -25,7 +26,6 @@ public class FooterlLinksAPITests {
     }
 
     @Test
-    @Story("Footer -> Solutions links")
     @AllureId("1629")
     @DisplayName("Check that \"Budget Planning & Management\" link returns code 200\n")
     public void budgetPlanningManagementLinkTest() {
@@ -36,7 +36,6 @@ public class FooterlLinksAPITests {
     }
 
     @Test
-    @Story("Footer -> Solutions links")
     @AllureId("1633")
     @DisplayName("Check that \"Campaign Planning & Execution\" link returns code 200")
     public void campaignPlanningExecutionLinkTest() {
@@ -47,7 +46,6 @@ public class FooterlLinksAPITests {
     }
 
     @Test
-    @Story("Footer -> Solutions links")
     @AllureId("1634")
     @DisplayName("Check that \"Content Creation & Distribution\" link returns code 200")
     public void contentCreationDistributionLinkTest() {
@@ -58,7 +56,6 @@ public class FooterlLinksAPITests {
     }
 
     @Test
-    @Story("Footer -> Solutions links")
     @AllureId("1636")
     @DisplayName("Check that \"Performance Measurement & Optimization\" link returns code 200")
     public void performanceMeasurementOptimizationLinkTest() {

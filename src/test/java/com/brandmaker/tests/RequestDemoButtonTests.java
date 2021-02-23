@@ -14,10 +14,10 @@ import static com.codeborne.selenide.Selenide.open;
 
 @Tag("web")
 @Feature("Main Page")
+@Story("\"Request a Demo\" button")
 public class RequestDemoButtonTests extends TestBase{
 
     @Test
-    @Story("\"Request a Demo\" button")
     @AllureId("1627")
     @DisplayName("Main page should contain \"Request a Demo\" button")
     public void requestDemoButtonExistsTest() {
@@ -29,7 +29,6 @@ public class RequestDemoButtonTests extends TestBase{
     }
 
     @Test
-    @Story("\"Request a Demo\" button")
     @AllureId("1628")
     @DisplayName("\"Request a Demo\" button should lead to a proper page with \"Schedule Customized Demo\" title")
     public void requestDemoButtonClickTest() {
