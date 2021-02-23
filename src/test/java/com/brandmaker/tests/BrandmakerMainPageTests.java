@@ -20,7 +20,7 @@ import static org.hamcrest.Matchers.containsString;
 public class BrandmakerMainPageTests extends TestBase{
 
     @Test
-    @AllureId("#1624")
+    @AllureId("1624")
     @DisplayName("Main page should contain \"Unleash Your Marketing Superpowers!\" title")
     public void mainPageTitleTest() {
         open("");
@@ -30,7 +30,7 @@ public class BrandmakerMainPageTests extends TestBase{
     }
 
     @Test
-    @AllureId("#1623")
+    @AllureId("1623")
     @Disabled
     @DisplayName("Console log should not contain any errors")
     public void mainPageConsoleLogTest() {
