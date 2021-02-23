@@ -24,7 +24,7 @@ https://jenkins.autotests.cloud/job/c03-andreddd799-brandmaker/
 <br />
 <br />
 
-## *Allure TestOps is a TMS that allows to manage all test related stuff in one place:*
+## *Allure TestOps - it is a TMS that allows to manage all test related stuff in one place:*
 ![selenoid_screenshot](src/test/resources/images/allure_testops_dashboard.png)
 ![selenoid_screenshot](src/test/resources/images/allure_testops_3.png)
 ![selenoid_screenshot](src/test/resources/images/allure_testops_1.png)
