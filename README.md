@@ -39,6 +39,6 @@ https://jenkins.autotests.cloud/job/c03-andreddd799-brandmaker/
 <br />
 <br />
 
-## *Telegram notification:*
+## *Telegram notifications:*
 
 ![selenoid_screenshot](src/test/resources/images/telegram_bot.png)
