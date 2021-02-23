@@ -9,8 +9,7 @@ import org.openqa.selenium.By;
 
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.$;
-import static com.codeborne.selenide.Selenide.open;
+import static com.codeborne.selenide.Selenide.*;
 
 @Tag("web")
 @Feature("\"Request a Demo\" form")
@@ -51,5 +50,6 @@ public class RequestDemoFormTests extends TestBase{
        $("[value=Submit]").click();
 
        $(".hs_email").find(By.cssSelector(".hs-error-msg")).shouldHave(text("Please enter your business email address. This form does not accept addresses from gmail.com."));
+       sleep(2500);
     }
 }
