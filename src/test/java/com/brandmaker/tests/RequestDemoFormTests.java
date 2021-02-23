@@ -50,6 +50,5 @@ public class RequestDemoFormTests extends TestBase{
        $("[value=Submit]").click();
 
        $(".hs_email").find(By.cssSelector(".hs-error-msg")).shouldHave(text("Please enter your business email address. This form does not accept addresses from gmail.com."));
-       sleep(2500);
     }
 }
