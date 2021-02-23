@@ -5,7 +5,7 @@ Jenkins job:
 https://jenkins.autotests.cloud/job/c03-andreddd799-brandmaker/
 
 
-What additional tools do I use in my tests?
+#*What additional tools do I use in my tests?*
 
 Selenoid - a lightning fast Selenium protocol implementation running browsers in Docker containers:
 ![selenoid_screenshot](src/test/resources/images/selenoid.png)
