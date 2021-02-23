@@ -40,6 +40,12 @@ https://jenkins.autotests.cloud/job/c03-andreddd799-brandmaker/
 <br />
 <br />
 
+## *Jenkins - it is an open source automation server:*
+![selenoid_screenshot](src/test/resources/images/jenkins.png)
+<br />
+<br />
+<br />
+
 ## *Telegram notifications:*
 
 ![selenoid_screenshot](src/test/resources/images/telegram_bot.png)
