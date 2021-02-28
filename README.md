@@ -51,12 +51,3 @@
 #### *Selenoid - a lightning fast Selenium protocol implementation running browsers in Docker containers:*
 ![selenoid_screenshot](src/test/resources/images/selenoid.png)
 ![selenoid_screenshot](src/test/resources/images/selenoid_video.gif)
-<br />
-<br />
-<br />
-
-Github Repo:
-https://github.com/dubograev/brandmaker_tests
-
-Jenkins job:
-https://jenkins.autotests.cloud/job/c03-andreddd799-brandmaker/<br><br>
