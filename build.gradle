@@ -26,7 +26,6 @@ allure {
 }
 
 dependencies {
-    implementation 'org.junit.jupiter:junit-jupiter:5.4.2'
     testImplementation (
             "org.aspectj:aspectjweaver:1.9.6",
             "com.codeborne:selenide:$selenideVersion",
@@ -77,6 +76,10 @@ tasks.withType(Test) {
     }
 }
 
+test {
+    useJUnitPlatform()
+}
+
 task web(type: Test) {
     useJUnitPlatform {
         includeTags 'web'
@@ -96,8 +99,4 @@ task ios(type: Test) {
         includeTags 'ios'
     }
     systemProperty 'platform', 'ios'
-}
-
-test {
-    useJUnitPlatform()
 }
