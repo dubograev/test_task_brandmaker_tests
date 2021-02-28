@@ -12,7 +12,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 @Tag("web")
 @Feature("\"Request a Demo\" form")
-public class RequestDemoFormTests extends TestBase{
+public class RequestDemoFormTests extends TestBase {
 
     @Test
     @AllureId("1641")
@@ -38,16 +38,16 @@ public class RequestDemoFormTests extends TestBase{
         open("contact/request-demo/");
         $("#hs-en-cookie-confirmation-buttons-area").$(byText("Accept")).click();
 
-       $("[id^=firstname]").setValue("Pit");
-       $("[id^=firstname]").setValue("Thomson");
-       $("[id^=email]").setValue("pit.thomson@gmail.com");
-       $("[id^=country]").selectOption("Russia");
-       $("[id^=company]").setValue("Brandmaker");
-       $("[id^=jobtitle]").setValue("Tester");
-       $("[id^=message]").setValue("Some text");
-       $("[id^=LEGAL_CONSENT]").click();
-       $("[value=Submit]").click();
+        $("[id^=firstname]").setValue("Pit");
+        $("[id^=firstname]").setValue("Thomson");
+        $("[id^=email]").setValue("pit.thomson@gmail.com");
+        $("[id^=country]").selectOption("Russia");
+        $("[id^=company]").setValue("Brandmaker");
+        $("[id^=jobtitle]").setValue("Tester");
+        $("[id^=message]").setValue("Some text");
+        $("[id^=LEGAL_CONSENT]").click();
+        $("[value=Submit]").click();
 
-       $(".hs_email").$(".hs-error-msg").shouldHave(text("Please enter your business email address. This form does not accept addresses from gmail.com."));
+        $(".hs_email").$(".hs-error-msg").shouldHave(text("Please enter your business email address. This form does not accept addresses from gmail.com."));
     }
 }

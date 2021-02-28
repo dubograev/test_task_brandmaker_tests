@@ -30,7 +30,7 @@ public class CustomWebDriver implements WebDriverProvider {
         capabilities.setCapability(CapabilityType.LOGGING_PREFS, logPrefs);
         capabilities.setBrowserName(getWebBrowser());
         capabilities.setCapability("enableVNC", true);
-        if(isVideoOn()) {
+        if (isVideoOn()) {
             capabilities.setCapability("enableVideo", true);
             capabilities.setCapability("videoFrameRate", 24);
         }
@@ -46,7 +46,7 @@ public class CustomWebDriver implements WebDriverProvider {
                 break;
         }
 
-        if(isRemoteWebDriver()) {
+        if (isRemoteWebDriver()) {
             return getRemoteWebDriver(capabilities);
         } else {
             return getLocalChromeDriver(capabilities);

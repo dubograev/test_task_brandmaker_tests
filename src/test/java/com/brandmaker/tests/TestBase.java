@@ -24,7 +24,7 @@ public class TestBase {
     }
 
     @AfterEach
-    public void addAttachments(){
+    public void addAttachments() {
         String sessionId = getSessionId();
 
         attachScreenshot("Last screenshot");

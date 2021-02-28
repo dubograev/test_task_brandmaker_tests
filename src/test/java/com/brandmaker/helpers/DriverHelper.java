@@ -33,19 +33,19 @@ public class DriverHelper {
         https://www.youtube.com/watch?v=w5EgCZgj5yE
      */
     public static By byTestId(String testId) {
-        if(isWeb()) {
-            return by("data-testid",  testId);
+        if (isWeb()) {
+            return by("data-testid", testId);
         } else if (isAndroid()) {
             return MobileBy.xpath("//*[@content-desc='" + testId + "']");
         } else if (isIos()) {
             return MobileBy.id(testId);
         } else { // todo isDesktop
-            return by("some-desktop-attribute-name",  testId);
+            return by("some-desktop-attribute-name", testId);
         }
     }
 
-    public static String getSessionId(){
-        return ((RemoteWebDriver) getWebDriver()).getSessionId().toString().replace("selenoid","");
+    public static String getSessionId() {
+        return ((RemoteWebDriver) getWebDriver()).getSessionId().toString().replace("selenoid", "");
     }
 
     public static String getConsoleLogs() {

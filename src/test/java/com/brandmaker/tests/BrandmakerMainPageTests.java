@@ -18,29 +18,29 @@ import static org.hamcrest.Matchers.not;
 
 @Tag("web")
 @Feature("Main Page")
-public class BrandmakerMainPageTests extends TestBase{
+public class BrandmakerMainPageTests extends TestBase {
 
     @Test
     @AllureId("1624")
     @DisplayName("Main page should contain \"Unleash Your Marketing Superpowers!\" title")
     public void mainPageTitleTest() {
-        step("Open main page", ()-> open(""));
+        step("Open main page", () -> open(""));
 
-        step("Accept cookies", ()->
+        step("Accept cookies", () ->
                 $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click());
 
-        step("Verify that main page contains \"Unleash Your Marketing Superpowers!\" title", ()->
-            $("[data-widget_type='bm_header.default']").shouldHave(text("Unleash Your Marketing Superpowers!")));
+        step("Verify that main page contains \"Unleash Your Marketing Superpowers!\" title", () ->
+                $("[data-widget_type='bm_header.default']").shouldHave(text("Unleash Your Marketing Superpowers!")));
     }
 
     @Test
     @AllureId("1623")
     @DisplayName("Console log should not contain any errors")
     public void mainPageConsoleLogTest() {
-        step("Open main page", ()-> open(""));
+        step("Open main page", () -> open(""));
 
-        step("Accept cookies", ()->
-            $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click());
+        step("Accept cookies", () ->
+                $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click());
 
         step("Main page should not have errors (SEVERE) in console", () -> {
             String consoleLogs = getConsoleLogs();
