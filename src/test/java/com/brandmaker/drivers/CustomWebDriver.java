@@ -1,7 +1,6 @@
 package com.brandmaker.drivers;
 
 import com.codeborne.selenide.WebDriverProvider;
-import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -20,8 +19,8 @@ import java.util.logging.Level;
 
 import static com.brandmaker.config.ConfigHelper.*;
 
-
 public class CustomWebDriver implements WebDriverProvider {
+
     @Override
     public WebDriver createDriver(DesiredCapabilities capabilities) {
         LoggingPreferences logPrefs = new LoggingPreferences();
@@ -33,17 +32,6 @@ public class CustomWebDriver implements WebDriverProvider {
         if (isVideoOn()) {
             capabilities.setCapability("enableVideo", true);
             capabilities.setCapability("videoFrameRate", 24);
-        }
-
-        // todo implement for other drivers - opera, firefox, safari
-        switch (getWebBrowser()) {
-            case "chrome":
-                capabilities.setCapability(ChromeOptions.CAPABILITY, getChromeOptions());
-                WebDriverManager.chromedriver().setup();
-                break;
-            case "opera":
-                // todo
-                break;
         }
 
         if (isRemoteWebDriver()) {
@@ -65,26 +53,9 @@ public class CustomWebDriver implements WebDriverProvider {
         chromeOptions.addArguments("--no-sandbox");
         chromeOptions.addArguments("--disable-notifications");
         chromeOptions.addArguments("--disable-infobars");
-        // more options - https://github.com/puppeteer/puppeteer/blob/7a2a41f2087b07e8ef1feaf3881bdcc3fd4922ca/src/Launcher.js#L261
 
         return chromeOptions;
     }
-
-//    private OperaOptions getOperaOptions() { // todo
-//        ...
-//    }
-
-//    private FirefoxOptions getFirefoxOptions() { // todo
-//        ...
-//    }
-
-//    private SafariOptions getSafariOptions() { // todo
-//        ...
-//    }
-
-//    private InternetExplorerOptions getInternetExplorerOptions() { // not todo
-//        ...
-//    }
 
     @SuppressWarnings("deprecation")
     private WebDriver getLocalChromeDriver(DesiredCapabilities capabilities) {

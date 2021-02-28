@@ -70,7 +70,6 @@ tasks.withType(Test) {
     testLogging {
         lifecycle {
             events "started", "failed"
-//            events "started", "skipped", "failed", "standard_error", "standard_out"
             exceptionFormat "short"
         }
     }
@@ -78,25 +77,4 @@ tasks.withType(Test) {
 
 test {
     useJUnitPlatform()
-}
-
-task web(type: Test) {
-    useJUnitPlatform {
-        includeTags 'web'
-    }
-    systemProperty 'platform', 'web'
-}
-
-task android(type: Test) {
-    useJUnitPlatform {
-        includeTags 'android'
-    }
-    systemProperty 'platform', 'android'
-}
-
-task ios(type: Test) {
-    useJUnitPlatform {
-        includeTags 'ios'
-    }
-    systemProperty 'platform', 'ios'
 }

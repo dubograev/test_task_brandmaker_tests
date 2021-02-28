@@ -11,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 import static com.brandmaker.config.ConfigHelper.getWebVideoStorage;
 import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 
-
 public class AttachmentsHelper {
 
     @Attachment(value = "{attachName}", type = "text/plain")
@@ -48,5 +47,4 @@ public class AttachmentsHelper {
         }
         return null;
     }
-
 }
