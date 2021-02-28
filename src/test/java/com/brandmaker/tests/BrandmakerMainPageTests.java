@@ -2,7 +2,6 @@ package com.brandmaker.tests;
 
 import io.qameta.allure.AllureId;
 import io.qameta.allure.Feature;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
@@ -27,13 +26,11 @@ public class BrandmakerMainPageTests extends TestBase{
     public void mainPageTitleTest() {
         step("Open main page", ()-> open(""));
 
-        step("Accept cookies", ()-> {
-            $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();
-        });
+        step("Accept cookies", ()->
+                $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click());
 
-        step("Verify that main page contains \"Unleash Your Marketing Superpowers!\" title", ()-> {
-            $("[data-widget_type='bm_header.default']").shouldHave(text("Unleash Your Marketing Superpowers!"));
-        });
+        step("Verify that main page contains \"Unleash Your Marketing Superpowers!\" title", ()->
+            $("[data-widget_type='bm_header.default']").shouldHave(text("Unleash Your Marketing Superpowers!")));
     }
 
     @Test
@@ -42,13 +39,12 @@ public class BrandmakerMainPageTests extends TestBase{
     public void mainPageConsoleLogTest() {
         step("Open main page", ()-> open(""));
 
-        step("Accept cookies", ()-> {
-            $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();
-        });
+        step("Accept cookies", ()->
+            $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click());
 
         step("Main page should not have errors (SEVERE) in console", () -> {
-        String consoleLogs = getConsoleLogs();
-        assertThat(consoleLogs, not(containsString("SEVERE")));
+            String consoleLogs = getConsoleLogs();
+            assertThat(consoleLogs, not(containsString("SEVERE")));
         });
     }
 }

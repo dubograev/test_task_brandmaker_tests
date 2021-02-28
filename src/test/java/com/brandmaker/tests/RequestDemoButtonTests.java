@@ -24,13 +24,11 @@ public class RequestDemoButtonTests extends TestBase{
     public void requestDemoButtonExistsTest() {
         step("Open main page", ()-> open(""));
 
-        step("Accept cookies", ()-> {
-            $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();
-        });
+        step("Accept cookies", ()->
+            $("#hs-en-cookie-confirmation-buttons-area").$(byText("Accept")).click());
 
-        step("Verify that main page contains \"Request a Demo\" button", ()-> {
-            $(".elementor-button-text", 2).scrollTo().shouldHave(text("Request a Demo"));
-        });
+        step("Verify that main page contains \"Request a Demo\" button", ()->
+            $(".elementor-button-text", 2).scrollTo().shouldHave(text("Request a Demo")));
     }
 
     @Test
@@ -39,16 +37,13 @@ public class RequestDemoButtonTests extends TestBase{
     public void requestDemoButtonClickTest() {
         step("Open main page", ()-> open(""));
 
-        step("Accept cookies", ()-> {
-            $("#hs-en-cookie-confirmation-buttons-area").find(byText("Accept")).click();
-        });
+        step("Accept cookies", ()->
+            $("#hs-en-cookie-confirmation-buttons-area").$(byText("Accept")).click());
 
-        step("Click on \"Request a Demo\" button", ()-> {
-            $(".elementor-button-text", 2).scrollIntoView(false).click();
-        });
+        step("Click on \"Request a Demo\" button", ()->
+            $(".elementor-button-text", 2).scrollIntoView(false).click());
 
-        step("Verify that \"Request a Demo\" button leads to \"Schedule Customized Demo\" page", ()-> {
-            $("h1").shouldHave(text("Schedule Customized Demo"));
-        });
+        step("Verify that \"Request a Demo\" button leads to \"Schedule Customized Demo\" page", ()->
+            $("h1").shouldHave(text("Schedule Customized Demo")));
     }
 }

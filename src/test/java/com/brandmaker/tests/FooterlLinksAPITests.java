@@ -15,7 +15,6 @@ import static io.restassured.RestAssured.when;
 public class FooterlLinksAPITests {
 
     @Test
-
     @AllureId("1635")
     @DisplayName("Check that \"Brand Management & Localization\" link returns code 200")
     public void brandManagementLocalizationLinkTest() {
